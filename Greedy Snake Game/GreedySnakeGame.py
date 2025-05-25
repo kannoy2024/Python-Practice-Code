@@ -22,7 +22,7 @@ CELL_SIZE = 20
 
 # 初始化窗口
 screen = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
-pygame.display.set_caption("贪吃蛇游戏")
+pygame.display.set_caption("黄祖振的贪吃蛇小游戏：52202042015")
 
 clock = pygame.time.Clock()
 
@@ -30,7 +30,7 @@ class Snake:
     def __init__(self):
         self.body = [[WINDOW_WIDTH//2, WINDOW_HEIGHT//2]]
         self.direction = "RIGHT"
-        self.speed = 10
+        self.speed = 6
 
     def move(self):
         head = self.body[0].copy()
@@ -153,7 +153,7 @@ def game_loop():
             if snake.body[0] == food.position:
                 snake.grow()
                 food.position = food.random_position()
-                score += 1
+                score += 100
                 snake.speed += 0.5
 
             # 绘制界面
