@@ -81,7 +81,6 @@ def show_game_over_screen(score):
     overlay.fill((0, 0, 0, 180))
     screen.blit(overlay, (0, 0))
     
-    # 使用支持中文的字体
     try:
         font_large = pygame.font.Font("simhei.ttf", 72)
         font_medium = pygame.font.Font("simhei.ttf", 48)
@@ -95,8 +94,10 @@ def show_game_over_screen(score):
     screen.blit(game_over_text, (WINDOW_WIDTH//2 - game_over_text.get_width()//2, WINDOW_HEIGHT//2 - 100))
     screen.blit(score_text, (WINDOW_WIDTH//2 - score_text.get_width()//2, WINDOW_HEIGHT//2 - 20))
     
-    restart_button = draw_button(screen, GREEN, WINDOW_WIDTH//2 - 100, WINDOW_HEIGHT//2 + 50, 200, 50, "再来一局", WHITE)
-    quit_button = draw_button(screen, RED, WINDOW_WIDTH//2 - 100, WINDOW_HEIGHT//2 + 120, 200, 50, "退出游戏", WHITE)
+    restart_button = draw_button(
+        screen, GREEN, WINDOW_WIDTH//2 - 100, WINDOW_HEIGHT//2 + 50, 200, 50, "再来一局", WHITE)
+    quit_button = draw_button(
+        screen, RED, WINDOW_WIDTH//2 - 100, WINDOW_HEIGHT//2 + 120, 200, 50, "退出游戏", WHITE)
     
     pygame.display.update()
     
